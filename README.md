@@ -2,4 +2,7 @@
 
 ### How to run
 
-`docker build -t eth-env . && docker run eth-env`
+``` bash
+docker build -t `whoami`/eth-env . && docker run `whoami`/eth-env
+```
+
