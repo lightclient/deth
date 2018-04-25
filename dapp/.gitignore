@@ -1,0 +1,6 @@
+# ignore everything
+*
+
+# don't ignore these two files
+!.gitignore
+!Dockerfile

@@ -1,0 +1,18 @@
+version: '2'
+services:
+  ganache:
+    build: ganache/
+    restart: on-failure
+    container_name: ganache
+    hostname: ganache
+    ports:
+      - "8545:8545"
+    network_mode: bridge
+  dapp:
+    build: dapp/
+    restart: on-failure
+    volumes:
+      - ./dapp:/usr/src/app
+    network_mode: bridge
+    stdin_open: true
+    tty: true

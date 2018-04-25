@@ -1,8 +1,11 @@
-# Dockerized Ethereum Development Environment
+# DETH
 
-### How to run
+A dockerized Ethereum development environment.
 
-``` bash
-docker build -t `whoami`/eth-env . && docker run -p 127.0.0.1:8545:8545 `whoami`/eth-env
+## Setup
+
+To start up a new instance of ganache and development environment for the dapps in the dapp folder:
 ```
-
+docker-compose up --build
+docker exec -it deth_dapp_1 bash
+```
