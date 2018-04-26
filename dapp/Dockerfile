@@ -6,7 +6,8 @@ WORKDIR /usr/src/app
 RUN apk update && apk upgrade && \
     apk add --no-cache bash git openssh
 
-run apk --update add g++ gcc libgcc libstdc++ linux-headers make python
+RUN apk --update add g++ gcc libgcc libstdc++ linux-headers make python
+
+RUN npm install -g truffle
 
 EXPOSE 8545
-# CMD [ "npm", "start" ]
