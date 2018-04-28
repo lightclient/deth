@@ -13,6 +13,7 @@ services:
     restart: on-failure
     ports:
       - "3000:3000"
+      - "35729:35729"
     volumes:
       - ./dapp:/usr/src/app
     network_mode: bridge

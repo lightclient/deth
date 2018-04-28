@@ -12,4 +12,5 @@ RUN npm install -g truffle
 
 EXPOSE 8545
 EXPOSE 3000
+EXPOSE 35729
 # CMD [ "npm", "start" ]
