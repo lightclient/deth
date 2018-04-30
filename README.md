@@ -10,6 +10,16 @@ docker-compose up --build
 docker exec -it deth_dapp_1 bash
 ```
 
+### FAQ
+
+```
+Building ganache
+Step 1/7 : FROM node:carbon
+ERROR: Service 'ganache' failed to build: Get https://registry-1.docker.io/v2/library/node/manifests/carbon: unauthorized: incorrect username or password
+```
+
+If you receive the above error message, execute `docker logout`.
+
 ## TODO
 
 - bind hostname to IP (ganache is 172.17.0.3)
