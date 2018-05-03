@@ -7,7 +7,6 @@ services:
     hostname: ganache
     ports:
       - "8545:8545"
-    network_mode: bridge
   dapp:
     build: dapp/
     restart: on-failure
@@ -16,6 +15,5 @@ services:
       - "35729:35729"
     volumes:
       - ./dapp:/usr/src/app
-    network_mode: bridge
     stdin_open: true
     tty: true

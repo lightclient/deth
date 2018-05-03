@@ -10,7 +10,5 @@ RUN apk --update add g++ gcc libgcc libstdc++ linux-headers make python
 
 RUN npm install -g truffle
 
-EXPOSE 8545
 EXPOSE 3000
 EXPOSE 35729
-# CMD [ "npm", "start" ]
