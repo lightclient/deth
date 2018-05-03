@@ -19,7 +19,3 @@ ERROR: Service 'ganache' failed to build: Get https://registry-1.docker.io/v2/li
 ```
 
 If you receive the above error message, execute `docker logout`.
-
-## TODO
-
-- bind hostname to IP (ganache is 172.17.0.3)

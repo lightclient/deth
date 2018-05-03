@@ -7,6 +7,8 @@ services:
     hostname: ganache
     ports:
       - "8545:8545"
+    # networks:
+    #   - delphi
   dapp:
     build: dapp/
     restart: on-failure
@@ -17,3 +19,10 @@ services:
       - ./dapp:/usr/src/app
     stdin_open: true
     tty: true
+#     networks:
+#       - delphi
+#
+# networks:
+#   delphi:
+#     #driver: bridge
+#     external: true
