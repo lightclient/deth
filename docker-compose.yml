@@ -1,14 +1,12 @@
-version: '2'
+version: '3.5'
 services:
   ganache:
     build: ganache/
     restart: on-failure
-    container_name: ganache
-    hostname: ganache
     ports:
       - "8545:8545"
-    # networks:
-    #   - delphi
+    networks:
+      - delphi
   dapp:
     build: dapp/
     restart: on-failure
@@ -19,10 +17,9 @@ services:
       - ./dapp:/usr/src/app
     stdin_open: true
     tty: true
-#     networks:
-#       - delphi
-#
-# networks:
-#   delphi:
-#     #driver: bridge
-#     external: true
+    networks:
+      - delphi
+
+networks:
+  delphi:
+    name: delphi
